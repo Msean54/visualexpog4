@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script  src="script.js" charset="utf-8"></script> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1-0"> 
+    <title>NetWorked</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/> 
+
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar" style="background-color:crimson;">  
+        <div class="max-width">
+            <div class="logo2"><a href="#">Net<span2>Worked.</span></a></div>
+            <ul class="menu">
+                <li><a href="index.html #home">Home</a></li>
+                <li><a href="index.html #members">Members</a></li>
+                <li><a href="index.html #trivia">Trivia</a></li>
+                <li><a href="index.html #data">Data Science</a></li>
+                <li><a href="#A">Projects</a>
+                    <ul>
+                       <li><a href="index.html #projects">Mindmap</a></li>
+                       &nbsp;
+                       &nbsp;
+                       <li><a href="index2.html #projects">Blog</a></li> 
+                       &nbsp;
+                       &nbsp;
+                       <li><a href="index2.html #projects2">Concept Map</a></li> 
+                       &nbsp;
+                       &nbsp;
+                       <li><a href="index2.html #projects3">Python</a></li>
+                       &nbsp;
+                       &nbsp;
+                       <li><a href="index3.html #project4">Data Visualization</a></li>
+                    </ul>
+                <li><a href="index.html #contact">Contact</a></li>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- home section start-->
+    <section class="home2" id="home2">
+        <div class="max-width">
+            <div class="home-content">
+            </div>
+        </div>
+    </section>
+    <!-- project section start-->
+    <section class="projects" id="projects">
+        <div class="max-width1" style="background-color:#fff;">
+            <h2 class="title2" style="color: #111;">BLOG</h2>
+            <div class="proj-content" >
+            <img src="comp.png"  width="1300" height="1600"></img>    
+            </div>
+        </div>
+    </section>
+    <!-- project section start-->
+    <section class="projects2" id="projects2">
+        <div class="max-width1" style="background-color:#fff;">
+            <h2 class="title2" style="color: #111;">CONCEPT MAP</h2>
+            <div class="proj-content" >
+            <img src="2.png"  width="1300" height="800"></img>  
+            <img src="3.png"  width="1300" height="800"></img>    
+            </div>
+        </div>
+    </section>
+    <!-- project section start-->
+    <section class="projects3" id="projects3">
+        <div class="max-width1" style="background-color:#fff;">
+            <h2 class="title2" style="color: #111;">Python</h2>
+            <div class="proj-content" >
+                <video width="900" height="550" controls>
+                    <source src="Comsci.mp4.mov" type="video/mp4">   
+            </div>
+        </div>
+    </section>
+    <!--footer section start-->
+    <footer>
+        <span>Creted By <a ref="#">G4Coders</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+    </footer>
+    
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+        if(this.scroll > 500){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').addClass("show"); 
+        }
+    });
+    $('#comment').click(function(){
+        var input = $('#input').val();
+        $('.box').append(input + '<br>');
+        $('input').val('');
+        $('.box-container').slideDown();
+    });
+    $('#cancel').click(function(){
+        $('input').val('');
+    });
+    $('#delete').click(function(){
+        $('.box').text('');
+    });
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+    });
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+
+    // typing animation script
+        var typed = new Typed(".typing",{
+            strings: ["Responsible", "Creative", "Hardworking", "Organized", "Optimistic"],
+            typeSpeed: 100, 
+            backSpeed: 60,
+            loop: true
+    });
+
+    // owl carousel script
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        aitoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
+});
+
+</script>
